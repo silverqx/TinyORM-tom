@@ -1,0 +1,13 @@
+# Names and values of these qmake variables are crucial, they are used in HelloWorld.pro
+# Please pay special attention to letter casing in paths, especially TinyOrm vs TinORM!
+
+# Path to the PARENT folder of the TinyORM source folder
+TINY_MAIN_DIR = $$clean_path($$PWD/../../TinyORM/)
+#TINY_MAIN_DIR    = $$clean_path($$(TINYORM_MAIN_DIR))
+# To find .env and .env.$$QMAKE_PLATFORM files
+TINY_DOTENV_ROOT = $$PWD
+# Path to the current build tree (used to guess the TinyORM build tree)
+TINY_BUILD_TREE  = $$shadowed($$PWD)
+
+# To find .prf files, needed by eg. CONFIG += tiny_system_headers inline/extern_constants
+QMAKEFEATURES *= $$quote($$TINY_MAIN_DIR/TinyORM/qmake/features)

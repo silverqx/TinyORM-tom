@@ -1,0 +1,61 @@
+# Optimized for Clang-Tidy v19
+---
+InheritParentConfig:          false
+WarningsAsErrors:             '*'
+HeaderFileExtensions:         ['h','hpp']
+ImplementationFileExtensions: ['cpp']
+HeaderFilterRegex:            ''
+FormatStyle:                  none
+UseColor:                     true
+Checks:
+  - -*
+  - bugprone-*
+  - clang-*
+  - concurrency-*
+  - cppcoreguidelines-*
+  - google-*
+  - llvm-*
+  - misc-*
+  - modernize-*
+  - performance-*
+  - portability-*
+  - readability-*
+  - hicpp-exception-baseclass
+  - hicpp-multiway-paths-covered
+  - -bugprone-easily-swappable-parameters
+  # This check is triggered for every TU so disabling
+  - -bugprone-macro-parentheses
+  - -clang-analyzer-optin.osx.*
+  - -clang-analyzer-osx.*
+  - -clang-analyzer-webkit.*
+  - -cppcoreguidelines-macro-usage
+  - -google-readability-todo
+  - -llvm-header-guard
+  - -misc-include-cleaner
+  - -misc-non-private-member-variables-in-classes
+  - -modernize-use-designated-initializers
+  - -modernize-use-nodiscard
+  - -modernize-use-trailing-return-type
+  - -readability-braces-around-statements
+  - -readability-identifier-length
+  - -readability-magic-numbers
+  # All below are only aliases
+  # Enabled
+  - -cppcoreguidelines-avoid-c-arrays
+  - -cppcoreguidelines-noexcept-destructor
+  - -cppcoreguidelines-noexcept-move-operations
+  - -cppcoreguidelines-noexcept-swap
+  - -cppcoreguidelines-use-default-member-init
+  - -google-readability-function-size
+  - -google-readability-namespace-comments
+  # Disabled above too
+  - -cppcoreguidelines-avoid-magic-numbers
+  - -cppcoreguidelines-non-private-member-variables-in-classes
+  - -google-readability-braces-around-statements
+CheckOptions:
+  - key:   cppcoreguidelines-avoid-do-while.IgnoreMacros
+    value: true
+  - key:   cppcoreguidelines-rvalue-reference-param-not-moved.AllowPartialMove
+    value: true
+  - key:   llvm-namespace-comment.ShortNamespaceLines
+    value: '5'
