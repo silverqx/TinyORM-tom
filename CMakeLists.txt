@@ -4,7 +4,7 @@
 # Minimum version must always correspond to the version that is in the latest Ubuntu LTS
 # 3.20 - because is used NEWLINE_STYLE in the file(GENERATE) command
 # 3.22 - because is used CMP0127: cmake_dependent_option() supports full Condition Syntax
-cmake_minimum_required(VERSION 3.22...3.30 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.22...3.31 FATAL_ERROR)
 
 # Specify the C++ standard
 set(CMAKE_CXX_STANDARD 20)
