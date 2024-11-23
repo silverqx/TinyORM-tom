@@ -1,9 +1,4 @@
-# Policies <= CMP0128 default to NEW
-# Maximum version allowed for the minimum version is 3.22 because of Ubuntu 22.04 LTS so
-# currently can't use the target_sources(FILE_SET) 😔
-# Minimum version must always correspond to the version that is in the latest Ubuntu LTS
-# 3.20 - because is used NEWLINE_STYLE in the file(GENERATE) command
-# 3.22 - because is used CMP0127: cmake_dependent_option() supports full Condition Syntax
+# Policies <= CMP0180 default to NEW
 cmake_minimum_required(VERSION 3.22...3.31 FATAL_ERROR)
 
 # Specify the C++ standard
