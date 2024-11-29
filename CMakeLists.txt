@@ -1,5 +1,5 @@
 # Policies <= CMP0180 default to NEW
-cmake_minimum_required(VERSION 3.22...3.31 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.23...3.31 FATAL_ERROR)
 
 # Specify the C++ standard
 set(CMAKE_CXX_STANDARD 20)
